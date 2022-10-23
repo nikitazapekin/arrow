@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="arrowTop"></div>
+<div class="matrix">
+
+</div>
+<style>
+  .arrowTop{
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    top:0;
+    background-color: #181414;
+  }
+</style>
+<script>
+let matrix=document.querySelector(".matrix")
+let arrowTop=document.querySelector(".arrowTop")
+for(let i=0; i<10000; i++){
+  document.writeln(i)
+}
+arrowTop.addEventListener("click", ()=> {
+  window.scrollTo(0, 0)
+})
+window.addEventListener('scroll', function() {
+  arrowTop.hidden = (pageYOffset < document.documentElement.clientHeight);
+});
+
+
+
+/*
+let form = document.createElement('form');
+form.action = 'https://google.com/search';
+form.method = 'GET';
+
+form.innerHTML = '<input name="q" value="test">';
+
+// перед отправкой формы, её нужно вставить в документ
+document.body.append(form);
+
+form.submit(); */
+</script>
+</body>
+</html>
